@@ -157,11 +157,13 @@ const Terminal = () => {
   return (
     <div className="min-h-screen p-4">
       <div className="w-full max-w-4xl mx-auto">
-        {/* Logo placeholder */}
+        {/* Logo */}
         <div className="mb-8 text-center">
-          <div className="inline-block p-4 border border-border rounded-sm bg-card/50">
-            <span className="text-lg font-bold text-primary">[ YOUR LOGO HERE ]</span>
-          </div>
+          <img 
+            src="/lovable-uploads/7c1f6926-efca-4071-a7d7-4a3fe43c37fd.png" 
+            alt="KAPITALIST" 
+            className="h-16 mx-auto"
+          />
         </div>
         
         {/* Terminal header */}
