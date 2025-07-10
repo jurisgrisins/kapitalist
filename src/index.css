@@ -2,41 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Terminal-inspired design system */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Terminal dark theme */
+    --background: 220 13% 8%;
+    --foreground: 120 100% 85%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 13% 10%;
+    --card-foreground: 120 100% 85%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 13% 10%;
+    --popover-foreground: 120 100% 85%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 220 13% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 120 100% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 120 50% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 120 100% 40%;
+    --accent-foreground: 220 13% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 220 13% 8%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 120 20% 25%;
+    --input: 220 13% 12%;
+    --ring: 120 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
+
+    /* Terminal-specific tokens */
+    --terminal-glow: 120 100% 50%;
+    --terminal-cursor: 120 100% 85%;
+    --terminal-prompt: 120 80% 60%;
+    --terminal-shadow: 120 100% 50%;
+
+    /* Gradients */
+    --gradient-terminal: linear-gradient(135deg, hsl(var(--background)), hsl(220 13% 5%));
+    --gradient-glow: radial-gradient(circle, hsl(var(--terminal-glow) / 0.1) 0%, transparent 70%);
+
+    /* Animations */
+    --transition-terminal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --cursor-blink: 1s infinite;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +113,44 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-mono;
+    background: var(--gradient-terminal);
+  }
+}
+
+@layer components {
+  /* Terminal cursor animation */
+  .terminal-cursor {
+    @apply inline-block w-2 h-5 bg-terminal-cursor;
+    animation: cursor-blink var(--cursor-blink) infinite;
+  }
+
+  @keyframes cursor-blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  /* Terminal glow effect */
+  .terminal-glow {
+    text-shadow: 0 0 10px hsl(var(--terminal-glow));
+    box-shadow: 0 0 20px hsl(var(--terminal-glow) / 0.2);
+  }
+
+  /* Terminal text styles */
+  .terminal-prompt {
+    @apply text-terminal-prompt;
+  }
+
+  .terminal-output {
+    @apply text-foreground;
+  }
+
+  /* Terminal window */
+  .terminal-window {
+    @apply bg-card border border-border rounded-sm p-6;
+    background: var(--gradient-glow), hsl(var(--card));
+    box-shadow: 
+      0 0 30px hsl(var(--terminal-shadow) / 0.3),
+      inset 0 1px 0 hsl(var(--border));
   }
 }

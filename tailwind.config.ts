@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				terminal: {
+					glow: 'hsl(var(--terminal-glow))',
+					cursor: 'hsl(var(--terminal-cursor))',
+					prompt: 'hsl(var(--terminal-prompt))',
+					shadow: 'hsl(var(--terminal-shadow))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
