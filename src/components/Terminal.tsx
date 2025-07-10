@@ -158,12 +158,12 @@ const Terminal = () => {
     <div className="min-h-screen p-4">
       <div className="w-full max-w-4xl mx-auto">
         {/* Logo */}
-        <div className="mb-12 text-center">
+        <div className="mb-12">
           <img 
             src="/lovable-uploads/4847beb6-09cb-49fe-93a5-12f68c788021.png" 
             alt="KAPITALIST" 
-            className="h-32 mx-auto object-contain"
-            style={{ objectPosition: 'center' }}
+            className="h-48 object-contain"
+            style={{ objectPosition: 'left center' }}
           />
         </div>
         
