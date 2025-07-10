@@ -155,8 +155,16 @@ const Terminal = () => {
   }, []);
 
   return (
-    <div className="min-h-screen p-4 flex items-center justify-center">
-      <div className="w-full max-w-4xl h-[600px] terminal-window terminal-glow">
+    <div className="min-h-screen p-4">
+      <div className="w-full max-w-4xl mx-auto">
+        {/* Logo placeholder */}
+        <div className="mb-8 text-center">
+          <div className="inline-block p-4 border border-border rounded-sm bg-card/50">
+            <span className="text-lg font-bold text-primary">[ YOUR LOGO HERE ]</span>
+          </div>
+        </div>
+        
+        {/* Terminal header */}
         <div className="flex items-center gap-2 mb-4 pb-3 border-b border-border">
           <div className="flex gap-1">
             <div className="w-3 h-3 rounded-full bg-destructive"></div>
