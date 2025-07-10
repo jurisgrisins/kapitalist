@@ -158,16 +158,16 @@ const Terminal = () => {
     <div className="min-h-screen p-4">
       <div className="w-full max-w-4xl mx-auto">
         {/* Logo */}
-        <div className="mb-8 text-center">
+        <div className="mb-12 text-center">
           <img 
             src="/lovable-uploads/7c1f6926-efca-4071-a7d7-4a3fe43c37fd.png" 
             alt="KAPITALIST" 
-            className="h-16 mx-auto"
+            className="h-40 mx-auto"
           />
         </div>
         
         {/* Terminal header */}
-        <div className="flex items-center gap-2 mb-4 pb-3 border-b border-border">
+        <div className="flex items-center gap-2 mb-4">
           <div className="flex gap-1">
             <div className="w-3 h-3 rounded-full bg-destructive"></div>
             <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
