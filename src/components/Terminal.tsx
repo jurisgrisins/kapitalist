@@ -160,7 +160,7 @@ const Terminal = () => {
         {/* Logo */}
         <div className="mb-6">
           <img 
-            src="/lovable-uploads/4847beb6-09cb-49fe-93a5-12f68c788021.png" 
+            src="/lovable-uploads/7c1f6926-efca-4071-a7d7-4a3fe43c37fd.png" 
             alt="KAPITALIST" 
             className="h-96 object-contain"
             style={{ objectPosition: 'left center' }}
