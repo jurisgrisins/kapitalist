@@ -162,7 +162,7 @@ const Terminal = () => {
           <img 
             src="/lovable-uploads/0a078e79-19a7-4f2a-8a42-533150bd54fe.png" 
             alt="KAPITALIST" 
-            className="h-48 object-contain"
+            className="h-24 object-contain"
             style={{ objectPosition: 'left center' }}
           />
         </div>
