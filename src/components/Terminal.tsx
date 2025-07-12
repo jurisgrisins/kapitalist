@@ -56,8 +56,8 @@ const Terminal = () => {
     contact: [
       'Get in touch:',
       '',
-      '  • Email: j@kapitalist.xyz',
-      '  • Twitter: @HM_9969',
+      '  • Email: mailto:j@kapitalist.xyz',
+      '  • Twitter: https://twitter.com/HM_9969',
       '',
       'Open to new ideas!',
     ],
@@ -65,7 +65,7 @@ const Terminal = () => {
   };
 
   const renderLineWithLinks = (line: string) => {
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const urlRegex = /(https?:\/\/[^\s]+|mailto:[^\s]+)/g;
     const parts = line.split(urlRegex);
     
     return parts.map((part, index) => {
