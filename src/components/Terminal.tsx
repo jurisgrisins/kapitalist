@@ -64,6 +64,29 @@ const Terminal = () => {
     clear: [],
   };
 
+  const renderLineWithLinks = (line: string) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const parts = line.split(urlRegex);
+    
+    return parts.map((part, index) => {
+      if (urlRegex.test(part)) {
+        return (
+          <a
+            key={index}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400 hover:text-cyan-300 underline transition-colors duration-200"
+            style={{ textShadow: '0 0 5px #00ffff' }}
+          >
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
+
   const executeCommand = (cmd: string) => {
     const trimmedCmd = cmd.trim().toLowerCase();
     
@@ -188,7 +211,7 @@ const Terminal = () => {
               )}
               {command.output.map((line, lineIndex) => (
                 <div key={lineIndex} className="terminal-output ml-4">
-                  {line}
+                  {renderLineWithLinks(line)}
                 </div>
               ))}
             </div>
