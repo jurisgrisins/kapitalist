@@ -180,7 +180,7 @@ const Terminal = () => {
         {/* Logo */}
         <div className="mb-6">
           <img 
-            src="/lovable-uploads/0a078e79-19a7-4f2a-8a42-533150bd54fe.png" 
+            src="/lovable-uploads/d53f66d1-d208-4a3e-9097-6aecce16898a.png" 
             alt="KAPITALIST" 
             className="h-24 object-contain"
             style={{ objectPosition: 'left center' }}
