@@ -41,7 +41,7 @@ const Terminal = () => {
       '  • Investing',
       '  • Modern art (and NFTs)',
       '',
-      'And curios about new tools and technologies!',
+      'And curious about new tools and technologies.',
     ],
     links: [
       'Useful links:',
